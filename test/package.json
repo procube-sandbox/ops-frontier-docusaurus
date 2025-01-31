@@ -1,0 +1,13 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Test site.",
+  "scripts": {
+    "test": "../packages/ops-frontier-docusaurus/ops-frontier-docusaurus.mjs"
+  },
+  "author": "Mitsuru Nakakawaji <mitsuru@procube.jp>",
+  "license": "MIT",
+  "dependencies": {
+    "@procube/ops-frontier-docusaurus": "^0.0.0"
+  }
+}

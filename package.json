@@ -1,0 +1,16 @@
+{
+  "name": "ops-frontier-docusaurus",
+  "version": "1.0.0",
+  "description": "Docusaurus template for Ops Frontier",
+  "repository": "https://github.com/procube-sandbox/ops-frontier-docusaurus",
+  "author": "Mitsuru Nakakawaji <mitsuru@procube.jp>",
+  "license": "MIT",
+  "private": false,
+  "workspaces": [
+    "packages/*",
+    "test"
+  ],
+  "devDependencies": {
+    "@procube/cs-tools": "^1.0.10"
+  }
+}
