@@ -1,0 +1,30 @@
+{
+    "name": "@procube/sections-to-table",
+    "version": "1.0.0",
+    "description": "JSX to convert sections to HTML table element",
+    "main": "index.js",
+    "type": "module",
+    "author": "Mitsuru Nakakawaji <mitsuru@procube.jp>",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc -p tsconfig.json"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/procube-sandbox/ops-frontier-docusaurus.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/procube-sandbox/ops-frontier-docusaurus/issues"
+    },
+    "homepage": "https://github.com/procube-sandbox/ops-frontier-docusaurus#readme",
+    "devDependencies": {
+        "@tsconfig/node20": "^20.1.4"
+    },
+    "dependencies": {
+        "@docusaurus/logger": "^3.7.0",
+        "mdast": "^2.3.2",
+        "unified": "^11.0.5",
+        "unist-util-visit": "^5.0.0"
+    }
+}

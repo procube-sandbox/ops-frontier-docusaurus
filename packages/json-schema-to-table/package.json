@@ -12,7 +12,6 @@
     "type": "git",
     "url": "git+https://github.com/procube-sandbox/ops-frontier-docusaurus.git"
   },
-  "author": "Mitsuru Nakakawaji <mitsuru@procube.jp>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/procube-sandbox/ops-frontier-docusaurus/issues"

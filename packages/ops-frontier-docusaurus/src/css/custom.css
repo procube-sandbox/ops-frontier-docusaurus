@@ -13,11 +13,11 @@
   --ifm-color-primary-light: #8b7023;
   --ifm-color-primary-lighter: #917525;
   --ifm-color-primary-lightest: #a4852a;
-  --ifm-code-font-size: 100%;
-  --ifm-font-size-base: 12px;
-  --ifm-h1-font-size: 1.8 rem;
+  --ifm-code-font-size: 90%;
+  --ifm-font-size-base: 14px;
+  /* --ifm-h1-font-size: 1.8 rem;
   --ifm-h2-font-size: 1.6 rem;
-  --ifm-h3-font-size: 1.4 rem;
+  --ifm-h3-font-size: 1.4 rem; */
   --doc-sidebar-width: 240px !important;
   --ifm-font-family-base: "Helvetica Neue", Arial,
     "Hiragino Kaku Gothic ProN", "Hiragino Sans",
