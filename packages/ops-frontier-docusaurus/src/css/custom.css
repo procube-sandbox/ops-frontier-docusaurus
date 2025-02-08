@@ -49,10 +49,6 @@
   --ifm-h3-font-size: 1.4rem;
   --ifm-heading-color: var(--ifm-color-primary-dark);
 }
-img{
-  height:90vh;
-  vertical-align:top;
-}
 
 table.test-spec thead td {
   text-align: center;

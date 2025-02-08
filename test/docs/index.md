@@ -3,7 +3,6 @@ title: Ops Frontier
 ---
 
 # 御社 DevSecOps を、最前線（フロンティア）へ。 - Ops Frontier
-![DevSecOps](../../static/img/DevSecOps.png)
 ## 課題
 - システム変更時のコミュニケーション不足による手戻り
 - セキュリティリスクの増大
@@ -51,7 +50,7 @@ Ops Frontierの効果を実感していただくために、無料トライア�
 
 
 :::warning
-上記の図は https://www.rworks.jp/cloud/azure/azure-column/azure-entry/30128/ からダウンロードしたものであるため、著作権上の問題があり、配布に使用してはならない。
+トップページの図は https://www.rworks.jp/cloud/azure/azure-column/azure-entry/30128/ からダウンロードしたものであるため、著作権上の問題があり、配布に使用してはならない。
 近日中に置換予定です。
 :::
 

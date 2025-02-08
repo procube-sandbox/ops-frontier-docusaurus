@@ -435,7 +435,6 @@ const plugin = (options) => {
   const transformer = async (ast, vfile) => {
       assert(ast.type == 'root')
       assert(Array.isArray(ast.children))
-      console.log(JSON.stringify(ast))
       ast.children = ast.children.map((node) => {
         if (node.type == 'code' && node.lang == 'yaml' && node.meta && node.meta.includes('format_as_test_table')) {
           try {
