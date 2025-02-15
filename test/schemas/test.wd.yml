@@ -1,0 +1,16 @@
+version: 1.0.0
+id: test
+workflow:
+  name: test
+  description: hoge
+  matchers:
+    - as: $request
+  steps:
+    - name: test
+      deps:
+      - $request
+      outs:
+      - test2
+      module:
+        package: zzz
+        name: yyy

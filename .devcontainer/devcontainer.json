@@ -16,7 +16,8 @@
             "extensions": [
                 "esbenp.prettier-vscode",
                 "rvest.vs-code-prettier-eslint",
-                "hediet.vscode-drawio"
+                "hediet.vscode-drawio",
+                "redhat.vscode-yaml"
             ]
         }
     },

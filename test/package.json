@@ -8,6 +8,7 @@
   "author": "Mitsuru Nakakawaji <mitsuru@procube.jp>",
   "license": "MIT",
   "dependencies": {
-    "@procube/ops-frontier-docusaurus": "^0.0.0"
+    "@procube/ops-frontier-docusaurus": "^0.0.0",
+    "json-schema-to-ts": "^3.1.1"
   }
 }

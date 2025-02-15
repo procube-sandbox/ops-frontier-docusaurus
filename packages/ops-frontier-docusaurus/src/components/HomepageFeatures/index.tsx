@@ -42,7 +42,7 @@ function Feature({title, PngPath, description}: FeatureItem) {
   return (
       <div className={clsx("col col--4")}>
           <div className="text--center">
-              <img src={PngPath} class=".featureImg" />
+              <img src={PngPath} className=".featureImg" />
           </div>
           <div className="text--center padding-horiz--md">
               <Heading as="h3">{title}</Heading>
