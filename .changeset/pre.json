@@ -1,0 +1,11 @@
+{
+  "mode": "pre",
+  "tag": "rc",
+  "initialVersions": {
+    "@procube/json-schema-to-table": "1.0.0",
+    "@procube/ops-frontier-docusaurus": "0.0.0",
+    "@procube/sections-to-table": "1.0.0",
+    "test": "1.0.0"
+  },
+  "changesets": []
+}

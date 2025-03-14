@@ -1,0 +1,34 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$id": "https://public-schemas.ops-frontier.dev/date-tansform-test",
+    "type": "object",
+    "title": "date-transform-test",
+    "description": "Test Schema for date tansform",
+    "properties": {
+        "name": {
+            "type": "string",
+            "maxLength": 64,
+            "title": "Test object name"
+        },
+        "dateStringTest": {
+            "type": "string",
+            "format": "date",
+            "transform": true,
+            "title": "Date string test"
+        },
+        "dateTimeStringTest": {
+            "type": "string",
+            "format": "date-time",
+            "title": "DateTime string test"
+        },
+        "TimeStringTest": {
+            "type": "string",
+            "format": "time",
+            "title": "Time string test"
+        },
+        "UnixTimeTest": {
+            "type": "number",
+            "title": "UnixTime seconds test"
+        }
+    }
+}

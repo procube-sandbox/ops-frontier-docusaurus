@@ -11,6 +11,11 @@
     "test"
   ],
   "devDependencies": {
-    "@procube/cs-tools": "^1.0.10"
+    "@changesets/cli": "^2.27.12",
+    "@procube/cs-tools": "github:procube-open/cs-tools#for-npm"
+  },
+  "dependencies": {
+    "json-schema-to-ts": "^3.1.1",
+    "test": "^1.0.0"
   }
 }

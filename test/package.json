@@ -7,6 +7,12 @@
   },
   "author": "Mitsuru Nakakawaji <mitsuru@procube.jp>",
   "license": "MIT",
+  "contributes": {
+    "yamlValidation": {
+      "fileMatch": "*.test-item.yml",
+      "url": "./schemas/"
+    }
+  },
   "dependencies": {
     "@procube/ops-frontier-docusaurus": "^0.0.0",
     "json-schema-to-ts": "^3.1.1"
