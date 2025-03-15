@@ -2,15 +2,13 @@
   "mode": "pre",
   "tag": "rc",
   "initialVersions": {
-    "@procube/json-schema-to-table": "1.0.0",
-    "@procube/ops-frontier-docusaurus": "0.0.0",
-    "@procube/sections-to-table": "1.0.0",
-    "test": "1.0.0",
     "@ops-frontier/json-schema-to-table": "1.0.0",
     "@ops-frontier/ops-frontier-docusaurus": "0.0.0",
-    "@ops-frontier/sections-to-table": "1.0.0"
+    "@ops-frontier/sections-to-table": "1.0.0",
+    "test": "1.0.0"
   },
   "changesets": [
-    "selfish-hairs-walk"
+    "selfish-hairs-walk",
+    "sweet-onions-tie"
   ]
 }

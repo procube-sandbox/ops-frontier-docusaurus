@@ -10,8 +10,8 @@
 3. 以下のテンプレートに適用して TypeScript のプログラムを生成し、 -o オプションで指定されたファイルに出力する。 -o オプションが指定されていない場合は、入力んとなったJSON Schema の拡張子を .ts に変えてファイルを生成する。
 
 ```javascript
-import {jsonTransformer} from "@procube/json-transformer"
-import type {transformedType} from "@procube/json-transformer"
+import {jsonTransformer} from "@ops-frontier/json-transformer"
+import type {transformedType} from "@ops-frontier/json-transformer"
 
 export const ${schemaName} = ${JSON.stringfy(schema,4)} as const
 export const ${typeName} = transformedType<typeof ${schemaName}>

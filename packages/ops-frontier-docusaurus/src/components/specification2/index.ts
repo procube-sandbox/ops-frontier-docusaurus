@@ -1,5 +1,5 @@
-import sectionsToTable from "@procube/sections-to-table";
-import type { SectionsToTableOptions } from "@procube/sections-to-table";
+import sectionsToTable from "@ops-frontier/sections-to-table";
+import type { SectionsToTableOptions } from "@ops-frontier/sections-to-table";
 
 
 const plugin = (_) => {
