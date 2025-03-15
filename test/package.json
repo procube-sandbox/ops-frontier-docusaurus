@@ -1,6 +1,6 @@
 {
   "name": "test",
-  "version": "1.0.1-rc.1",
+  "version": "1.0.1",
   "description": "Test site.",
   "scripts": {
     "test": "../packages/ops-frontier-docusaurus/ops-frontier-docusaurus.mjs"
@@ -14,7 +14,7 @@
     }
   },
   "dependencies": {
-    "@ops-frontier/ops-frontier-docusaurus": "^0.0.1-rc.1",
+    "@ops-frontier/ops-frontier-docusaurus": "^0.0.1",
     "json-schema-to-ts": "^3.1.1"
   }
 }
