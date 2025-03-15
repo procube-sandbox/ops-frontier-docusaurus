@@ -1,18 +1,17 @@
 import type {ReactNode} from 'react';
 import clsx from 'clsx';
-import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
 type FeatureItem = {
     title: string
-    PngPath: string
+    Svg: string
     description: ReactNode
 }
 
 const FeatureList: FeatureItem[] = [
     {
         title: "DevSecOps",
-        PngPath: "img/DevSecOps.png",
+        Svg: require("@site/static/img/devsecops.svg").default,
         description: (
             <>
                 Ops Frontier は、DevSecOps を実践するための ベストプラクティス
@@ -22,7 +21,7 @@ const FeatureList: FeatureItem[] = [
     },
     {
         title: "Zero Trust Architecture",
-        PngPath: "img/zta.drawio.png",
+        Svg: require("@site/static/img/zerotrust.svg").default,
         description: (
             <>
                 従来の境界型セキュリティでは、社内ネットワークに侵入されると、内部のシステムやデータは脅威に晒されていました。
@@ -33,19 +32,19 @@ const FeatureList: FeatureItem[] = [
     },
     {
         title: "オールインワン",
-        PngPath: "img/toolbox.png",
+        Svg: require("@site/static/img/allinone.svg").default,
         description: <>Ops Frontierは、DevSecOpsの実践に必要な機能を オールインワン で提供するプラットフォームです。</>,
     },
 ]
 
-function Feature({title, PngPath, description}: FeatureItem) {
+function Feature({title, Svg, description}: FeatureItem) {
   return (
       <div className={clsx("col col--4")}>
           <div className="text--center">
-              <img src={PngPath} className=".featureImg" />
+              <Svg className={styles.featureSvg} role="img" />
           </div>
           <div className="text--center padding-horiz--md">
-              <Heading as="h3">{title}</Heading>
+              <h3>{title}</h3>
               <p>{description}</p>
           </div>
       </div>

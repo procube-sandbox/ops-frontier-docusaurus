@@ -1,0 +1,45 @@
+name: Publish npm package
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  # packages: write <- GitHub Packages は使用しないのでコメントアウト (このworkflowでは不要)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+          cache: 'npm'
+          # Defaults to the user or organization that owns the workflow file
+          scope: ${{ '@' }}${{ github.repository_owner }}
+
+      - name: Get version to be released
+        id: get-version
+        run: node -e "console.log('version=' + require('./package.json').version)" >> "$GITHUB_OUTPUT"
+      - name: npm パッケージを公開
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" >> .npmrc
+          npm install --no-audit --no-fund --ci
+          npm publish
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Add Tag
+        if: ${{steps.check-in-pre.outputs.pre == 1 }}
+        run: |
+          git tag v${VERSION}
+          git push --tags origin v${VERSION}
+        env:
+          VERSION: ${{ steps.get-version.outputs.version }}

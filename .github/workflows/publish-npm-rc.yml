@@ -1,0 +1,41 @@
+name: Publish RC for Pull Request
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
+  # packages: write  <- GitHub Packages は使用しないのでコメントアウト
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check if changeset is in prerelease mode
+        id: check-in-pre
+        run: echo "pre=$(test -r .changeset/pre.json; echo $?)"  >> "$GITHUB_OUTPUT"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+          cache: 'npm'
+          # registry-url: 'https://npm.pkg.github.com'  <- npmjs.com を使うので削除
+          # scope: ${{ '@' }}${{ github.repository_owner }} <- npmjs.com を使うので削除
+
+      - name: Publish npm package
+        if: ${{ steps.check-in-pre.outputs.pre == 0 }}
+        run: |
+          # echo "@${GITHUB_REPOSITORY_OWNER}:registry=https://npm.pkg.github.com" >> .npmrc  <- GitHub Packages 用の設定なので削除
+          echo "//registry.npmjs.org/:_authToken=${NPM_AUTH_TOKEN}" >> .npmrc # npmjs 用の設定に変更
+          npm install --no-audit --no-fund --ci
+          npm publish --tag rc
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # secrets名を変更

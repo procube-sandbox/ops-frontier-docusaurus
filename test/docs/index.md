@@ -47,13 +47,3 @@ Ops Frontierは、DevSecOpsのあらゆるフェーズを支援するサービ�
 ## まずは無料トライアル
 Ops Frontierの効果を実感していただくために、無料トライアルをご用意しました。
 お気軽にお申込みください。
-
-
-:::warning
-トップページの図は https://www.rworks.jp/cloud/azure/azure-column/azure-entry/30128/ からダウンロードしたものであるため、著作権上の問題があり、配布に使用してはならない。
-近日中に置換予定です。
-:::
-
-:::warning
-ロゴマーク及びfavicon は <a target="_blank" href="https://icons8.com/icon/BejoiOeRfYSo/devops">Devops</a> アイコン by <a target="_blank" href="https://icons8.com">Icons8</a>　です。近日中に置換予定です。
-:::

@@ -1,6 +1,6 @@
 {
-    "name": "@procube/sections-to-table",
-    "version": "1.0.0",
+    "name": "@ops-frontier/sections-to-table",
+    "version": "1.0.1",
     "description": "JSX to convert sections to HTML table element",
     "main": "index.js",
     "type": "module",

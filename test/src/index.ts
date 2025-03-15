@@ -1,4 +1,4 @@
-import { FromSchema } from "json-schema-to-ts"
+import { FromSchema, JSONSchema } from "json-schema-to-ts"
 import Ajv from "ajv"
 const ajv = new Ajv()
 ajv.addKeyword({
@@ -16,34 +16,40 @@ ajv.addKeyword({
     },
 })
 
-import workflowDefinition from "../schemas/workflowDefinition";
-import workflowStep from "../schemas/workflowStep";
+import workflowDefinition from "./workflowDefinition"
+import workflowStep from "./workflowStep"
+import { JSONSchemaReference } from "json-schema-to-ts/lib/types/definitions"
 
-type Email = string & { brand: "email" };
 
-type WorkflowDefinition = FromSchema<
-    typeof workflowDefinition,
+type Email = string & { brand: "email" }
+
+export type Desirialize = [
     {
-        references: [typeof workflowStep]
-        deserialize: [
-            {
-                pattern: {
-                    type: "string"
-                    format: "email"
-                }
-                output: Email
-            },
-            {
-                pattern: {
-                    type: "string"
-                    format: "date-time"
-                    toDate: true
-                }
-                output: Date
-            },
-        ]
+        pattern: {
+            type: "string"
+            format: "email"
+        }
+        output: Email
+    },
+    {
+        pattern: {
+            type: "string"
+            format: "date-time"
+            toDate: true
+        }
+        output: Date
+    },
+]
+
+type transformedType<T extends JSONSchema, R extends JSONSchemaReference[]> = FromSchema<
+    T,
+    {
+        references: R
+        deserialize: Desirialize
     }
 >
+
+type WorkflowDefinition = transformedType<typeof workflowDefinition, [typeof workflowStep]>
 
 const validate = ajv.compile(workflowDefinition)
 
@@ -59,7 +65,7 @@ export function dateToString(x: any) {
         return x.toISOString()
     } else if (x instanceof Array) {
         return x.map(dateToString)
-    } else if (typeof x === 'object') {
+    } else if (typeof x === "object") {
         for (const [key, value] of Object.entries(x)) {
             x[key] = dateToString(value)
         }

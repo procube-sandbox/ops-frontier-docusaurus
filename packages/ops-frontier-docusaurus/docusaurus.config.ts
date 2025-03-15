@@ -67,12 +67,12 @@ const config: Config = {
 
     themeConfig: {
         // Replace with your project's social card
-        image: "img/DevSecOps.png",
+        image: "img/DevSecOps.svg",
         navbar: {
-            title: "Ops Frontier",
+            title: "",
             logo: {
                 alt: "Ops Frontier Logo",
-                src: "img/logo.svg",
+                src: "img/symbol_logo_4c.svg",
             },
             items: [
                 {
